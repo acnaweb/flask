@@ -37,27 +37,6 @@ c_run:
 		docker run --env-file .env -d ${IMAGE_NAME}; \
 	fi
 
-# Continuous Deployment/Delivery
-
-coverage:
-	echo "run coverage"
-
-deploy_staging:
-	echo "deploy staging"
-
-deploy_production:
-	echo "deploy production"
-
-smoke_test:
-	echo "smoke test"	
-
-package: 
-	rm -rf dist
-	python setup.py sdist --formats=zip
-
-publish: test package 
-	twine upload dist/*
-
 debug:
 	flask --app src/app run --host=0.0.0.0 --debug
 	
