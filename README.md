@@ -2,6 +2,10 @@
 
 Flask
 
+### WSGI
+
+![](assets/imgs/wsgi.png)
+
 ## References
 
 - https://flask.palletsprojects.com/en/3.0.x/
