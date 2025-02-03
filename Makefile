@@ -27,7 +27,7 @@ test:
 
 # Containter
 
-build:
+c_build:
 	docker build -t ${IMAGE_NAME} .
 
 c_run:
