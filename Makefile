@@ -32,9 +32,9 @@ c_build:
 
 c_run:
 	if [ ! -f .env ]; then \
-		docker run -d -p 5000:5000 ${IMAGE_NAME}; \
+		docker run -p 5000:5000 ${IMAGE_NAME}; \
 	else \
-		docker run --env-file .env -d -p 5000:5000 ${IMAGE_NAME}; \
+		docker run --env-file .env -p 5000:5000 ${IMAGE_NAME}; \
 	fi
 
 c_it:
