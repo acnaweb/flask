@@ -1,4 +1,4 @@
-export IMAGE_NAME=flask
+export IMAGE_NAME=my-api
 
 # Local development
 install:
@@ -34,8 +34,12 @@ c_run:
 	if [ ! -f .env ]; then \
 		docker run -d -p 5000:5000 ${IMAGE_NAME}; \
 	else \
-		docker run --env-file .env -d ${IMAGE_NAME}; \
+		docker run --env-file .env -d -p 5000:5000 ${IMAGE_NAME}; \
 	fi
+
+c_it:
+	docker run -it -p 5000:5000 ${IMAGE_NAME} sh
+	
 
 debug:
 	flask --app src/app run --host=0.0.0.0 --debug

@@ -2,6 +2,10 @@
 
 Flask
 
+### Documentação Online
+
+http://localhost:5000/openapi/swagger
+
 ### WSGI
 
 ![](assets/imgs/wsgi.png)
